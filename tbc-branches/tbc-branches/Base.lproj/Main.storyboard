@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pKg-Ju-ePE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6YY-FX-bGC">
+            <objects>
+                <viewController id="4hT-wu-H0M" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mFm-Gs-JEm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2H-hD-TJG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRANCHES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd2-BQ-EiU">
+                                        <rect key="frame" x="155" y="48" width="104" height="24"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.24313725489999999" green="0.65098039220000004" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wd2-BQ-EiU" firstAttribute="centerX" secondItem="V2H-hD-TJG" secondAttribute="centerX" id="1qT-gf-7KQ"/>
+                                    <constraint firstAttribute="height" constant="96" id="oxZ-J6-LnX"/>
+                                    <constraint firstAttribute="bottom" secondItem="wd2-BQ-EiU" secondAttribute="bottom" constant="24" id="xCA-X3-OXA"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-Fs-sRE">
+                                <rect key="frame" x="0.0" y="96" width="414" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yHr-sx-emj">
+                                    <size key="itemSize" width="414" height="154"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="atm_cell" id="ydY-un-F0c" customClass="BranchAtmCollectionViewCell" customModule="tbc_branches" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="154"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pVQ-u3-SOF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="154"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="branch-h-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1gE-aI-Fzp">
+                                                    <rect key="frame" x="16" y="36" width="22" height="82"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="PD5-EB-6tf"/>
+                                                        <constraint firstAttribute="width" constant="22" id="Wcv-cm-QeF"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khashuri atm #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loE-O1-X4E">
+                                                    <rect key="frame" x="51" y="58.5" width="347" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                    <color key="textColor" red="0.35294117650000001" green="0.4039215686" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lomuri str #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwa-yR-yWd">
+                                                    <rect key="frame" x="51" y="78.5" width="347" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                    <color key="textColor" red="0.63529411759999999" green="0.67450980390000004" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kwa-yR-yWd" firstAttribute="leading" secondItem="loE-O1-X4E" secondAttribute="leading" id="Lvt-Rk-Fy3"/>
+                                                <constraint firstAttribute="bottom" secondItem="1gE-aI-Fzp" secondAttribute="bottom" constant="36" id="O81-oC-swr"/>
+                                                <constraint firstAttribute="trailing" secondItem="loE-O1-X4E" secondAttribute="trailing" constant="16" id="VEu-97-1vM"/>
+                                                <constraint firstItem="loE-O1-X4E" firstAttribute="leading" secondItem="1gE-aI-Fzp" secondAttribute="trailing" constant="13" id="Yn3-Hs-hKs"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kwa-yR-yWd" secondAttribute="trailing" constant="16" id="cbJ-4r-6XQ"/>
+                                                <constraint firstItem="Kwa-yR-yWd" firstAttribute="top" secondItem="loE-O1-X4E" secondAttribute="bottom" constant="3" id="mIt-Bd-MRj"/>
+                                                <constraint firstItem="1gE-aI-Fzp" firstAttribute="top" secondItem="pVQ-u3-SOF" secondAttribute="top" constant="36" id="pen-CZ-Ncj"/>
+                                                <constraint firstItem="loE-O1-X4E" firstAttribute="centerY" secondItem="1gE-aI-Fzp" secondAttribute="centerY" constant="-10" id="sVa-y5-1ui"/>
+                                                <constraint firstItem="1gE-aI-Fzp" firstAttribute="leading" secondItem="pVQ-u3-SOF" secondAttribute="leading" constant="16" id="vne-v3-4eG"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="address" destination="Kwa-yR-yWd" id="zul-ry-Kfv"/>
+                                            <outlet property="name" destination="loE-O1-X4E" id="b6K-n4-Zmm"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2a4-Fs-sRE" firstAttribute="top" secondItem="V2H-hD-TJG" secondAttribute="bottom" id="2TE-ta-6Id"/>
+                            <constraint firstItem="V2H-hD-TJG" firstAttribute="top" secondItem="mFm-Gs-JEm" secondAttribute="top" id="4bs-2w-nla"/>
+                            <constraint firstItem="2a4-Fs-sRE" firstAttribute="trailing" secondItem="wJS-sb-GH1" secondAttribute="trailing" id="5Yg-fw-h62"/>
+                            <constraint firstItem="V2H-hD-TJG" firstAttribute="leading" secondItem="wJS-sb-GH1" secondAttribute="leading" id="6Wr-Zn-1iV"/>
+                            <constraint firstItem="2a4-Fs-sRE" firstAttribute="leading" secondItem="wJS-sb-GH1" secondAttribute="leading" id="B7n-tk-QVy"/>
+                            <constraint firstItem="2a4-Fs-sRE" firstAttribute="bottom" secondItem="wJS-sb-GH1" secondAttribute="bottom" id="QJU-5H-w81"/>
+                            <constraint firstItem="V2H-hD-TJG" firstAttribute="trailing" secondItem="wJS-sb-GH1" secondAttribute="trailing" id="T9B-Ua-Y0X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wJS-sb-GH1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="branch-icon" id="xee-Ym-J4p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RxD-3E-f8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992.753623188406" y="129.91071428571428"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="WXC-M7-JF3">
+            <objects>
+                <viewController id="hCT-Mp-MXb" customClass="MapViewController" customModule="tbc_branches" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kvy-nY-ZlT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MwE-bq-4mQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4L-ds-d5h">
+                                        <rect key="frame" x="184.5" y="48" width="45" height="24"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.24313725489999999" green="0.65098039220000004" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="E4L-ds-d5h" firstAttribute="centerX" secondItem="MwE-bq-4mQ" secondAttribute="centerX" id="2TD-ac-cZH"/>
+                                    <constraint firstAttribute="bottom" secondItem="E4L-ds-d5h" secondAttribute="bottom" constant="24" id="e6A-vl-fHL"/>
+                                    <constraint firstAttribute="height" constant="96" id="o3k-xt-qB9"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HrK-hd-lgP">
+                                <rect key="frame" x="0.0" y="96" width="414" height="717"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MwE-bq-4mQ" firstAttribute="leading" secondItem="val-9b-VYo" secondAttribute="leading" id="8xg-IH-Gcg"/>
+                            <constraint firstItem="val-9b-VYo" firstAttribute="trailing" secondItem="HrK-hd-lgP" secondAttribute="trailing" id="EDk-Yd-CKt"/>
+                            <constraint firstItem="HrK-hd-lgP" firstAttribute="top" secondItem="MwE-bq-4mQ" secondAttribute="bottom" id="J7V-jL-771"/>
+                            <constraint firstItem="MwE-bq-4mQ" firstAttribute="trailing" secondItem="val-9b-VYo" secondAttribute="trailing" id="Xq6-oQ-iNS"/>
+                            <constraint firstItem="MwE-bq-4mQ" firstAttribute="top" secondItem="Kvy-nY-ZlT" secondAttribute="top" id="m26-L9-vpS"/>
+                            <constraint firstItem="val-9b-VYo" firstAttribute="bottom" secondItem="HrK-hd-lgP" secondAttribute="bottom" id="svn-0A-Nnf"/>
+                            <constraint firstItem="HrK-hd-lgP" firstAttribute="leading" secondItem="val-9b-VYo" secondAttribute="leading" id="ziP-K0-BxL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="val-9b-VYo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="map-icon" id="Gt6-2e-m4s"/>
+                    <connections>
+                        <outlet property="mapView" destination="HrK-hd-lgP" id="sSY-DY-fAA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68b-MD-0uh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="130"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tbc_branches" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Te3-O1-toH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdK-bv-phc">
+                                        <rect key="frame" x="179.5" y="48" width="55" height="24"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.24313725490196078" green="0.65098039215686276" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hdK-bv-phc" secondAttribute="bottom" constant="24" id="0e3-6t-nH7"/>
+                                    <constraint firstItem="hdK-bv-phc" firstAttribute="centerX" secondItem="Te3-O1-toH" secondAttribute="centerX" id="CM8-Tn-fLX"/>
+                                    <constraint firstAttribute="height" constant="96" id="xgE-Bm-VxQ"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rQK-6C-nFE">
+                                <rect key="frame" x="0.0" y="96" width="414" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I9i-Ry-vGJ">
+                                    <size key="itemSize" width="414" height="154"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="atm_cell" id="mFh-6H-Qxp" customClass="BranchAtmCollectionViewCell" customModule="tbc_branches" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="154"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0UC-Ya-r3W">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="154"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="atm-h-icon" translatesAutoresizingMaskIntoConstraints="NO" id="rUc-ZO-Ip7">
+                                                    <rect key="frame" x="16" y="36" width="22" height="82"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="2l9-gu-dBf"/>
+                                                        <constraint firstAttribute="height" constant="15" id="Aop-XT-owG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khashuri atm #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySL-yc-Ymv">
+                                                    <rect key="frame" x="51" y="58.5" width="347" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                    <color key="textColor" red="0.3529411764705882" green="0.40392156862745099" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lomuri str #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeS-Hq-gnw">
+                                                    <rect key="frame" x="51" y="78.5" width="347" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                    <color key="textColor" red="0.63529411764705879" green="0.67450980392156867" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ySL-yc-Ymv" secondAttribute="trailing" constant="16" id="1qk-2o-5wI"/>
+                                                <constraint firstItem="ySL-yc-Ymv" firstAttribute="leading" secondItem="rUc-ZO-Ip7" secondAttribute="trailing" constant="13" id="8aI-fo-Swl"/>
+                                                <constraint firstAttribute="trailing" secondItem="KeS-Hq-gnw" secondAttribute="trailing" constant="16" id="K6e-WW-f2a"/>
+                                                <constraint firstItem="KeS-Hq-gnw" firstAttribute="leading" secondItem="ySL-yc-Ymv" secondAttribute="leading" id="Nuy-fD-OmF"/>
+                                                <constraint firstItem="rUc-ZO-Ip7" firstAttribute="top" secondItem="0UC-Ya-r3W" secondAttribute="top" constant="36" id="d5S-h3-XHn"/>
+                                                <constraint firstItem="rUc-ZO-Ip7" firstAttribute="leading" secondItem="0UC-Ya-r3W" secondAttribute="leading" constant="16" id="dgw-qv-ep4"/>
+                                                <constraint firstAttribute="bottom" secondItem="rUc-ZO-Ip7" secondAttribute="bottom" constant="36" id="j8D-PA-tgY"/>
+                                                <constraint firstItem="ySL-yc-Ymv" firstAttribute="centerY" secondItem="rUc-ZO-Ip7" secondAttribute="centerY" constant="-10" id="xNt-sK-aLO"/>
+                                                <constraint firstItem="KeS-Hq-gnw" firstAttribute="top" secondItem="ySL-yc-Ymv" secondAttribute="bottom" constant="3" id="ybh-UY-PVP"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="address" destination="KeS-Hq-gnw" id="jxC-4B-PTt"/>
+                                            <outlet property="name" destination="ySL-yc-Ymv" id="PtR-j4-2HP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rQK-6C-nFE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EgO-If-CqL"/>
+                            <constraint firstItem="rQK-6C-nFE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H5Y-PZ-uR6"/>
+                            <constraint firstItem="Te3-O1-toH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bMU-kO-qD6"/>
+                            <constraint firstItem="Te3-O1-toH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dEp-Di-Szj"/>
+                            <constraint firstItem="rQK-6C-nFE" firstAttribute="top" secondItem="Te3-O1-toH" secondAttribute="bottom" id="tGi-Bd-H8t"/>
+                            <constraint firstItem="rQK-6C-nFE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tXA-aE-AN0"/>
+                            <constraint firstItem="Te3-O1-toH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zE5-8E-T0c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="atm-icon" id="s6d-AR-D3r"/>
+                    <connections>
+                        <outlet property="atmCollection" destination="rQK-6C-nFE" id="s6f-ur-5rL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="9F1-1L-22e">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pKg-Ju-ePE" customClass="MainViewController" customModule="tbc_branches" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Bz-2n-828">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6Xb-VW-wym"/>
+                        <segue destination="4hT-wu-H0M" kind="relationship" relationship="viewControllers" id="RXZ-9H-lxa"/>
+                        <segue destination="hCT-Mp-MXb" kind="relationship" relationship="viewControllers" id="C3k-iY-RpI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Isy-ur-lAK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="atm-h-icon" width="23" height="16"/>
+        <image name="atm-icon" width="23" height="16"/>
+        <image name="branch-h-icon" width="24" height="24"/>
+        <image name="branch-icon" width="24" height="24"/>
+        <image name="map-icon" width="23" height="23"/>
+    </resources>
+</document>
