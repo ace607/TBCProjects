@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Branches View Controller-->
         <scene sceneID="6YY-FX-bGC">
             <objects>
-                <viewController id="4hT-wu-H0M" sceneMemberID="viewController">
+                <viewController id="4hT-wu-H0M" customClass="BranchesViewController" customModule="tbc_branches" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mFm-Gs-JEm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,6 +111,9 @@
                         <viewLayoutGuide key="safeArea" id="wJS-sb-GH1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="branch-icon" id="xee-Ym-J4p"/>
+                    <connections>
+                        <outlet property="branchesCollection" destination="2a4-Fs-sRE" id="Dw6-J0-bQe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RxD-3E-f8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -275,6 +278,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pKg-Ju-ePE" customClass="MainViewController" customModule="tbc_branches" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Bz-2n-828">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

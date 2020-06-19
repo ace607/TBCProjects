@@ -1,5 +1,5 @@
 //
-//  ATMViewModel.swift
+//  BranchViewModel.swift
 //  tbc-branches
 //
 //  Created by Admin on 6/19/20.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-class ATMViewModel {
+class BranchViewModel {
     
     public var getObjects = { (completion: @escaping ([ATMBranch]) -> ()) in
         var objects = [ATMBranch]()
         let service = APIService()
         
         service.fetchObjects { (c) in
-            objects.append(contentsOf: c.filter({ $0.type == "1" }))
+            objects.append(contentsOf: c.filter({ $0.type == "2" }))
             completion(objects)
         }
         

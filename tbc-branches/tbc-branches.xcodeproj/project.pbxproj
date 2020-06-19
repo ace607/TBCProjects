@@ -20,6 +20,10 @@
 		84D80609249C9780006F01CE /* BranchAtmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D80608249C9780006F01CE /* BranchAtmCollectionViewCell.swift */; };
 		84D8060D249C9B52006F01CE /* ATMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8060C249C9B52006F01CE /* ATMViewModel.swift */; };
 		84D8060F249C9C61006F01CE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8060E249C9C61006F01CE /* MapViewController.swift */; };
+		84D80611249CD1CA006F01CE /* itemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D80610249CD1CA006F01CE /* itemModel.swift */; };
+		84D80613249CD37C006F01CE /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D80612249CD37C006F01CE /* APIServices.swift */; };
+		84D80615249CEB45006F01CE /* BranchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D80614249CEB44006F01CE /* BranchViewModel.swift */; };
+		84D80617249CEB76006F01CE /* BranchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D80616249CEB76006F01CE /* BranchesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		84D80608249C9780006F01CE /* BranchAtmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchAtmCollectionViewCell.swift; sourceTree = "<group>"; };
 		84D8060C249C9B52006F01CE /* ATMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMViewModel.swift; sourceTree = "<group>"; };
 		84D8060E249C9C61006F01CE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		84D80610249CD1CA006F01CE /* itemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemModel.swift; sourceTree = "<group>"; };
+		84D80612249CD37C006F01CE /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		84D80614249CEB44006F01CE /* BranchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchViewModel.swift; sourceTree = "<group>"; };
+		84D80616249CEB76006F01CE /* BranchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 			children = (
 				84D80600249C92E9006F01CE /* MainViewController.swift */,
 				84D8060E249C9C61006F01CE /* MapViewController.swift */,
+				84D80616249CEB76006F01CE /* BranchesViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -109,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				84D80608249C9780006F01CE /* BranchAtmCollectionViewCell.swift */,
+				84D80610249CD1CA006F01CE /* itemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +126,7 @@
 		84D8060A249C9908006F01CE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				84D80612249CD37C006F01CE /* APIServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				84D8060C249C9B52006F01CE /* ATMViewModel.swift */,
+				84D80614249CEB44006F01CE /* BranchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -201,12 +213,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D80617249CEB76006F01CE /* BranchesViewController.swift in Sources */,
 				84D805ED249C90EC006F01CE /* ViewController.swift in Sources */,
 				84D805E9249C90EC006F01CE /* AppDelegate.swift in Sources */,
 				84D8060D249C9B52006F01CE /* ATMViewModel.swift in Sources */,
+				84D80615249CEB45006F01CE /* BranchViewModel.swift in Sources */,
 				84D805EB249C90EC006F01CE /* SceneDelegate.swift in Sources */,
+				84D80613249CD37C006F01CE /* APIServices.swift in Sources */,
 				84D80609249C9780006F01CE /* BranchAtmCollectionViewCell.swift in Sources */,
 				84D805F3249C90ED006F01CE /* tbc_branches.xcdatamodeld in Sources */,
+				84D80611249CD1CA006F01CE /* itemModel.swift in Sources */,
 				84D80601249C92E9006F01CE /* MainViewController.swift in Sources */,
 				84D8060F249C9C61006F01CE /* MapViewController.swift in Sources */,
 			);

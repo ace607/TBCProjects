@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BranchesViewController.swift
 //  tbc-branches
 //
 //  Created by Admin on 6/19/20.
@@ -8,52 +8,49 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet weak var atmCollection: UICollectionView!
+class BranchesViewController: UIViewController {
+
+    @IBOutlet weak var branchesCollection: UICollectionView!
     
-    var atms = [ATMBranch]()
+    var branches = [ATMBranch]()
     
-    let viewModel = ATMViewModel()
+    let viewModel = BranchViewModel()
     
     var selectedItem: ATMBranch?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        branchesCollection.delegate = self
+        branchesCollection.dataSource = self
         
-        atmCollection.delegate = self
-        atmCollection.dataSource = self
         
         viewModel.getObjects { (objects) in
-            self.atms.append(contentsOf: objects)
+            self.branches.append(contentsOf: objects)
             DispatchQueue.main.async {
-                self.atmCollection.reloadData()
+                self.branchesCollection.reloadData()
             }
         }
+        
     }
 
-    
-
 }
-
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension BranchesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedItem = atms[indexPath.row]
+        selectedItem = branches[indexPath.row]
         self.tabBarController?.selectedIndex = 2
 
-        NotificationCenter.default.post(name: NSNotification.Name("show_pin"), object: nil, userInfo: ["selectedObj" : selectedItem])
+        NotificationCenter.default.post(name: NSNotification.Name("show_pin"), object: nil, userInfo: ["selectedObj" : selectedItem!])
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return atms.count
+        return branches.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = atmCollection.dequeueReusableCell(withReuseIdentifier: "atm_cell", for: indexPath) as! BranchAtmCollectionViewCell
+        let cell = branchesCollection.dequeueReusableCell(withReuseIdentifier: "atm_cell", for: indexPath) as! BranchAtmCollectionViewCell
         
-        cell.name.text = atms[indexPath.row].nameGe
-        cell.address.text = atms[indexPath.row].addressGe
+        cell.name.text = branches[indexPath.row].nameGe
+        cell.address.text = branches[indexPath.row].addressGe
         
         return cell
     }

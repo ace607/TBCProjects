@@ -16,10 +16,23 @@ class MapViewController: UIViewController {
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
     
+    var selectedItem: ATMBranch?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
         
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didRecieveObject(with:)),
+            name: NSNotification.Name("show_pin"),
+            object: nil)
+
+    }
+    
+    @objc func didRecieveObject(with notification: Notification) {
+
+        self.selectedItem = (notification.userInfo!["selectedObj"] as! ATMBranch)
         
     }
     
@@ -40,9 +53,10 @@ class MapViewController: UIViewController {
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
-            checkLocationAuthorization()
+            print("asd")
         } else {
             // Show alert letting the user know they have to turn this on.
+            checkLocationAuthorization()
         }
     }
     
@@ -66,6 +80,8 @@ class MapViewController: UIViewController {
         case .authorizedAlways:
             break
             
+        @unknown default:
+            print("")
         }
     }
 }
