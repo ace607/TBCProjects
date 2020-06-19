@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-real-estate/Pods-real-estate-frameworks.sh
+${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework
+${BUILT_PRODUCTS_DIR}/Shimmer/Shimmer.framework
+${BUILT_PRODUCTS_DIR}/ShimmerBlocks/ShimmerBlocks.framework

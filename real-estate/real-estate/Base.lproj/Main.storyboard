@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GT-Walsheim-Pro-Medium-Trial.otf">
+            <string>GTWalsheimProTrial-Md</string>
+        </array>
+        <array key="GT-Walsheim-Pro-Regular-Trial.otf">
+            <string>GTWalsheimProTrial-Rg</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="real_estate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a room in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6F-wk-zcN">
+                                <rect key="frame" x="24" y="68" width="140.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="22"/>
+                                <color key="textColor" red="0.52549019607843139" green="0.58823529411764708" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los Angeles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ow-LF-dQI">
+                                <rect key="frame" x="24" y="106.5" width="180" height="39"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Md" family="GT Walsheim Pro Trial" pointSize="34"/>
+                                <color key="textColor" red="1" green="0.43137254901960786" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S21-jP-cBp">
+                                <rect key="frame" x="352" y="61" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7OV-17-ZsH"/>
+                                    <constraint firstAttribute="height" constant="40" id="gkJ-Nf-c5f"/>
+                                </constraints>
+                                <color key="tintColor" red="0.52549019607843139" green="0.58823529411764708" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="search_icon"/>
+                                <connections>
+                                    <action selector="onSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqs-8B-qJD"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mfE-yu-CeZ">
+                                <rect key="frame" x="0.0" y="165.5" width="414" height="696.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mUH-V5-WOT">
+                                    <size key="itemSize" width="414" height="290"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="home_cell" id="gAX-Nt-sir" customClass="HomeCollectionViewCell" customModule="real_estate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pqr-2g-ys9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xg7-d1-pQi">
+                                                    <rect key="frame" x="12" y="0.0" width="390" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="160" id="htk-zA-Fds"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="James smith Villa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-6G-np4">
+                                                    <rect key="frame" x="24" y="174" width="155" height="23"/>
+                                                    <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                                    <color key="textColor" red="0.23921568627450979" green="0.3411764705882353" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 3,10,500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTM-8x-zbH">
+                                                    <rect key="frame" x="24" y="208" width="94" height="23"/>
+                                                    <fontDescription key="fontDescription" name="GTWalsheimProTrial-Md" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                                    <color key="textColor" red="0.050980392156862744" green="0.1764705882352941" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYK-Qi-i6d">
+                                                    <rect key="frame" x="124" y="205.5" width="64.5" height="28"/>
+                                                    <color key="backgroundColor" red="0.99607843137254903" green="0.94117647058823528" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOR RENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-Sn-SVJ">
+                                                    <rect key="frame" x="129" y="212.5" width="54.5" height="14"/>
+                                                    <fontDescription key="fontDescription" name="GTWalsheimProTrial-Md" family="GT Walsheim Pro Trial" pointSize="12"/>
+                                                    <color key="textColor" red="0.050980392159999999" green="0.1764705882" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bur-6i-aae">
+                                                    <rect key="frame" x="24" y="245" width="366" height="24"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70Z-vD-xEe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="122" height="24"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bed_icon" translatesAutoresizingMaskIntoConstraints="NO" id="e3y-QE-1rL">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="24" id="YXe-o7-GXd"/>
+                                                                        <constraint firstAttribute="width" constant="24" id="vdS-A0-rHb"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Bedroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8Z-jK-7rd">
+                                                                    <rect key="frame" x="29" y="3.5" width="72.5" height="17.5"/>
+                                                                    <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="15"/>
+                                                                    <color key="textColor" red="0.52549019607843139" green="0.58823529411764708" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="d8Z-jK-7rd" firstAttribute="leading" secondItem="e3y-QE-1rL" secondAttribute="trailing" constant="5" id="Pp2-Dh-KzM"/>
+                                                                <constraint firstItem="e3y-QE-1rL" firstAttribute="leading" secondItem="70Z-vD-xEe" secondAttribute="leading" id="WJe-Bt-OZR"/>
+                                                                <constraint firstItem="e3y-QE-1rL" firstAttribute="top" secondItem="70Z-vD-xEe" secondAttribute="top" id="epd-zq-mjQ"/>
+                                                                <constraint firstItem="d8Z-jK-7rd" firstAttribute="centerY" secondItem="e3y-QE-1rL" secondAttribute="centerY" id="huF-d0-DsQ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="e3y-QE-1rL" secondAttribute="bottom" id="mYG-L8-Ot7"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xup-Jg-r9u">
+                                                            <rect key="frame" x="122" y="0.0" width="122" height="24"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bath_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mGB-cq-jbT">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="24" id="jEC-PP-wHz"/>
+                                                                        <constraint firstAttribute="width" constant="24" id="wuX-EU-IKw"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Bathroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfy-KU-aGK">
+                                                                    <rect key="frame" x="29" y="3.5" width="78.5" height="17.5"/>
+                                                                    <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="15"/>
+                                                                    <color key="textColor" red="0.52549019610000003" green="0.58823529409999997" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="mGB-cq-jbT" firstAttribute="leading" secondItem="xup-Jg-r9u" secondAttribute="leading" id="0Av-9s-8fq"/>
+                                                                <constraint firstItem="tfy-KU-aGK" firstAttribute="centerY" secondItem="mGB-cq-jbT" secondAttribute="centerY" id="2Mg-gP-6af"/>
+                                                                <constraint firstItem="mGB-cq-jbT" firstAttribute="top" secondItem="xup-Jg-r9u" secondAttribute="top" id="D2Q-fa-k6N"/>
+                                                                <constraint firstItem="tfy-KU-aGK" firstAttribute="leading" secondItem="mGB-cq-jbT" secondAttribute="trailing" constant="5" id="hWg-Zt-VKZ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="mGB-cq-jbT" secondAttribute="bottom" id="hbr-Z5-CeL"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGd-Ym-VZI">
+                                                            <rect key="frame" x="244" y="0.0" width="122" height="24"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueprint_icon" translatesAutoresizingMaskIntoConstraints="NO" id="c5n-1G-jbV">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="24" id="nHI-o9-t9a"/>
+                                                                        <constraint firstAttribute="width" constant="24" id="xaG-NH-QHY"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 sqft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkr-vP-drx">
+                                                                    <rect key="frame" x="29" y="3.5" width="39" height="17.5"/>
+                                                                    <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="15"/>
+                                                                    <color key="textColor" red="0.52549019610000003" green="0.58823529409999997" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Qkr-vP-drx" firstAttribute="leading" secondItem="c5n-1G-jbV" secondAttribute="trailing" constant="5" id="0WT-QN-Rx7"/>
+                                                                <constraint firstAttribute="bottom" secondItem="c5n-1G-jbV" secondAttribute="bottom" id="5Ia-nV-fte"/>
+                                                                <constraint firstItem="c5n-1G-jbV" firstAttribute="leading" secondItem="SGd-Ym-VZI" secondAttribute="leading" id="pbA-b7-FFx"/>
+                                                                <constraint firstItem="Qkr-vP-drx" firstAttribute="centerY" secondItem="c5n-1G-jbV" secondAttribute="centerY" id="tT3-yc-ASo"/>
+                                                                <constraint firstItem="c5n-1G-jbV" firstAttribute="top" secondItem="SGd-Ym-VZI" secondAttribute="top" id="uJ6-wY-kZP"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="2iY-PT-76d"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xg7-d1-pQi" firstAttribute="top" secondItem="pqr-2g-ys9" secondAttribute="top" id="0J6-KG-9Ka"/>
+                                                <constraint firstItem="AYK-Qi-i6d" firstAttribute="height" secondItem="zWn-Sn-SVJ" secondAttribute="height" multiplier="2" id="0s2-ya-4Io"/>
+                                                <constraint firstItem="zWn-Sn-SVJ" firstAttribute="leading" secondItem="fTM-8x-zbH" secondAttribute="trailing" constant="11" id="10M-Xa-btw"/>
+                                                <constraint firstItem="bur-6i-aae" firstAttribute="top" secondItem="fTM-8x-zbH" secondAttribute="bottom" constant="14" id="7cc-SC-Ald"/>
+                                                <constraint firstItem="AYK-Qi-i6d" firstAttribute="leading" secondItem="zWn-Sn-SVJ" secondAttribute="leading" constant="-5" id="Czx-Gy-esv"/>
+                                                <constraint firstItem="fTM-8x-zbH" firstAttribute="leading" secondItem="Jlf-6G-np4" secondAttribute="leading" id="DJC-Fn-NUw"/>
+                                                <constraint firstItem="Jlf-6G-np4" firstAttribute="top" secondItem="xg7-d1-pQi" secondAttribute="bottom" constant="14" id="F0u-sP-nat"/>
+                                                <constraint firstItem="xg7-d1-pQi" firstAttribute="leading" secondItem="pqr-2g-ys9" secondAttribute="leading" constant="12" id="VIC-YJ-KOV"/>
+                                                <constraint firstAttribute="trailing" secondItem="bur-6i-aae" secondAttribute="trailing" constant="24" id="Wst-Ym-pfg"/>
+                                                <constraint firstAttribute="trailing" secondItem="xg7-d1-pQi" secondAttribute="trailing" constant="12" id="eGA-Yb-bdC"/>
+                                                <constraint firstItem="AYK-Qi-i6d" firstAttribute="centerY" secondItem="zWn-Sn-SVJ" secondAttribute="centerY" id="h8b-78-vab"/>
+                                                <constraint firstItem="fTM-8x-zbH" firstAttribute="top" secondItem="Jlf-6G-np4" secondAttribute="bottom" constant="11" id="m7k-j1-yct"/>
+                                                <constraint firstItem="AYK-Qi-i6d" firstAttribute="trailing" secondItem="zWn-Sn-SVJ" secondAttribute="trailing" constant="5" id="q1f-Is-Not"/>
+                                                <constraint firstItem="bur-6i-aae" firstAttribute="leading" secondItem="pqr-2g-ys9" secondAttribute="leading" constant="24" id="tWM-J7-5pR"/>
+                                                <constraint firstItem="zWn-Sn-SVJ" firstAttribute="centerY" secondItem="fTM-8x-zbH" secondAttribute="centerY" id="tcB-wo-Irf"/>
+                                                <constraint firstItem="Jlf-6G-np4" firstAttribute="leading" secondItem="pqr-2g-ys9" secondAttribute="leading" constant="24" id="wKU-iw-3ev"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="bath_count" destination="tfy-KU-aGK" id="FJ4-Ih-qvU"/>
+                                            <outlet property="bed_count" destination="d8Z-jK-7rd" id="EHc-E9-umg"/>
+                                            <outlet property="home_img" destination="xg7-d1-pQi" id="GMn-pp-eHN"/>
+                                            <outlet property="home_price" destination="fTM-8x-zbH" id="Fjw-EW-w4V"/>
+                                            <outlet property="home_title" destination="Jlf-6G-np4" id="doK-Rq-7EK"/>
+                                            <outlet property="home_type" destination="zWn-Sn-SVJ" id="K5d-dK-1oT"/>
+                                            <outlet property="sqr" destination="Qkr-vP-drx" id="lC1-30-Lnh"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlI-9u-pRp">
+                                <rect key="frame" x="154.5" y="799" width="105" height="48"/>
+                                <color key="backgroundColor" red="0.42352941176470588" green="0.30588235294117649" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="8Ad-Wv-vwm"/>
+                                    <constraint firstAttribute="height" constant="48" id="sGA-ui-aDI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Md" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onFilterBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ke-hQ-TJP"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-oq-vjl">
+                                <rect key="frame" x="0.0" y="896" width="414" height="480"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6E-2B-Txh">
+                                        <rect key="frame" x="24" y="30" width="125.5" height="39"/>
+                                        <fontDescription key="fontDescription" name="GTWalsheimProTrial-Md" family="GT Walsheim Pro Trial" pointSize="34"/>
+                                        <color key="textColor" red="0.84705882352941175" green="0.9882352941176471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9C-Me-FPM">
+                                        <rect key="frame" x="24" y="100" width="43" height="23"/>
+                                        <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                        <color key="textColor" red="0.84705882349999995" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z4V-Xn-Nwr">
+                                        <rect key="frame" x="24" y="133" width="390" height="36"/>
+                                        <color key="backgroundColor" red="0.42352941179999998" green="0.30588235289999999" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="PME-XV-249"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ld7-uX-Kf1">
+                                            <size key="itemSize" width="125" height="35"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filter_cell1" id="cSI-UG-v2m" customClass="FilterCollectionViewCell" customModule="real_estate" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.5" width="88" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Jm-yk-VD0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toi-1m-Ixy">
+                                                            <rect key="frame" x="25" y="6" width="38.5" height="23"/>
+                                                            <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                                            <color key="textColor" red="0.84705882349999995" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="toi-1m-Ixy" firstAttribute="centerY" secondItem="6Jm-yk-VD0" secondAttribute="centerY" id="oKL-CI-Rqf"/>
+                                                        <constraint firstItem="toi-1m-Ixy" firstAttribute="centerX" secondItem="6Jm-yk-VD0" secondAttribute="centerX" id="zgj-KT-nUb"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="88" height="35"/>
+                                                <connections>
+                                                    <outlet property="filterCellLabel" destination="toi-1m-Ixy" id="2Y3-Fa-h6R"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqy-7Y-FHW">
+                                        <rect key="frame" x="24" y="195" width="44.5" height="23"/>
+                                        <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                        <color key="textColor" red="0.84705882349999995" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FAa-QK-GBC">
+                                        <rect key="frame" x="24" y="232" width="390" height="36"/>
+                                        <color key="backgroundColor" red="0.42352941179999998" green="0.30588235289999999" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="9hU-zQ-G5y"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mV5-Em-O3v">
+                                            <size key="itemSize" width="125" height="35"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filter_cell2" id="cG8-M8-yTi" customClass="FilterCollectionViewCell" customModule="real_estate" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.5" width="72" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EhP-SI-cny">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylf-LJ-umX">
+                                                            <rect key="frame" x="30.5" y="6" width="11.5" height="23"/>
+                                                            <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                                            <color key="textColor" red="0.84705882349999995" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Ylf-LJ-umX" firstAttribute="centerY" secondItem="EhP-SI-cny" secondAttribute="centerY" id="pL2-vd-tRw"/>
+                                                        <constraint firstItem="Ylf-LJ-umX" firstAttribute="centerX" secondItem="EhP-SI-cny" secondAttribute="centerX" id="u93-Bo-aHa"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="72" height="35"/>
+                                                <connections>
+                                                    <outlet property="filterCellLabel" destination="Ylf-LJ-umX" id="lgu-WQ-WCC"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os1-9I-cBX">
+                                        <rect key="frame" x="24" y="294" width="80" height="23"/>
+                                        <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                        <color key="textColor" red="0.84705882349999995" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pkC-bQ-7Py">
+                                        <rect key="frame" x="24" y="333" width="390" height="36"/>
+                                        <color key="backgroundColor" red="0.42352941179999998" green="0.30588235289999999" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="jh0-Uv-1ZC"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FOI-Qg-K5f">
+                                            <size key="itemSize" width="125" height="35"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filter_cell3" id="6Q3-5Y-EmY" customClass="FilterCollectionViewCell" customModule="real_estate" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.5" width="56" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cZW-Xf-AbW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zv-HO-f5J">
+                                                            <rect key="frame" x="24" y="6" width="8" height="23"/>
+                                                            <fontDescription key="fontDescription" name="GTWalsheimProTrial-Rg" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                                            <color key="textColor" red="0.84705882349999995" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="9zv-HO-f5J" firstAttribute="centerX" secondItem="cZW-Xf-AbW" secondAttribute="centerX" id="nni-y4-s0x"/>
+                                                        <constraint firstItem="9zv-HO-f5J" firstAttribute="centerY" secondItem="cZW-Xf-AbW" secondAttribute="centerY" id="z2S-b8-yQI"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="56" height="35"/>
+                                                <connections>
+                                                    <outlet property="filterCellLabel" destination="9zv-HO-f5J" id="4Zr-cO-kOk"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8m-oW-f5c">
+                                        <rect key="frame" x="24" y="387" width="366" height="1"/>
+                                        <color key="backgroundColor" red="0.39215686274509803" green="0.38823529411764707" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="kEj-TD-hsZ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDv-Oy-YIs">
+                                        <rect key="frame" x="24" y="388" width="366" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jPg-Zt-oBZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GTWalsheimProTrial-Md" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                        <state key="normal" title="Apply">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onApply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3q-Ze-1fF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.42352941179999998" green="0.30588235289999999" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FAa-QK-GBC" firstAttribute="leading" secondItem="Sn1-oq-vjl" secondAttribute="leading" constant="24" id="3P7-EZ-FtF"/>
+                                    <constraint firstItem="pkC-bQ-7Py" firstAttribute="leading" secondItem="Sn1-oq-vjl" secondAttribute="leading" constant="24" id="4B7-Aq-3nz"/>
+                                    <constraint firstItem="PDv-Oy-YIs" firstAttribute="leading" secondItem="Sn1-oq-vjl" secondAttribute="leading" constant="24" id="7wP-BY-tdm"/>
+                                    <constraint firstItem="PDv-Oy-YIs" firstAttribute="top" secondItem="d8m-oW-f5c" secondAttribute="bottom" id="9Bj-JK-7RL"/>
+                                    <constraint firstItem="os1-9I-cBX" firstAttribute="leading" secondItem="FAa-QK-GBC" secondAttribute="leading" id="9za-KE-qyD"/>
+                                    <constraint firstItem="z4V-Xn-Nwr" firstAttribute="top" secondItem="I9C-Me-FPM" secondAttribute="bottom" constant="10" id="CGI-cv-kvj"/>
+                                    <constraint firstItem="I9C-Me-FPM" firstAttribute="top" secondItem="V6E-2B-Txh" secondAttribute="bottom" constant="31" id="IaK-1W-5dd"/>
+                                    <constraint firstItem="FAa-QK-GBC" firstAttribute="top" secondItem="aqy-7Y-FHW" secondAttribute="bottom" constant="14" id="J7T-9S-LoN"/>
+                                    <constraint firstAttribute="height" constant="480" id="Qwv-u0-Kx5"/>
+                                    <constraint firstItem="d8m-oW-f5c" firstAttribute="leading" secondItem="Sn1-oq-vjl" secondAttribute="leading" constant="24" id="Yh7-xU-tvC"/>
+                                    <constraint firstItem="aqy-7Y-FHW" firstAttribute="top" secondItem="z4V-Xn-Nwr" secondAttribute="bottom" constant="26" id="ZwH-6C-z6C"/>
+                                    <constraint firstAttribute="trailing" secondItem="d8m-oW-f5c" secondAttribute="trailing" constant="24" id="apS-JW-pD5"/>
+                                    <constraint firstItem="os1-9I-cBX" firstAttribute="top" secondItem="FAa-QK-GBC" secondAttribute="bottom" constant="26" id="d5h-Zu-IgG"/>
+                                    <constraint firstItem="I9C-Me-FPM" firstAttribute="leading" secondItem="V6E-2B-Txh" secondAttribute="leading" id="dOO-HB-UPi"/>
+                                    <constraint firstItem="d8m-oW-f5c" firstAttribute="bottom" secondItem="pkC-bQ-7Py" secondAttribute="bottom" constant="19" id="g3w-wu-TNX"/>
+                                    <constraint firstAttribute="trailing" secondItem="pkC-bQ-7Py" secondAttribute="trailing" id="hf4-3c-Lgp"/>
+                                    <constraint firstItem="pkC-bQ-7Py" firstAttribute="top" secondItem="os1-9I-cBX" secondAttribute="bottom" constant="16" id="ieu-ir-Tn7"/>
+                                    <constraint firstItem="aqy-7Y-FHW" firstAttribute="leading" secondItem="z4V-Xn-Nwr" secondAttribute="leading" id="lsk-fo-Caq"/>
+                                    <constraint firstItem="V6E-2B-Txh" firstAttribute="leading" secondItem="Sn1-oq-vjl" secondAttribute="leading" constant="24" id="lzW-fM-7st"/>
+                                    <constraint firstItem="V6E-2B-Txh" firstAttribute="top" secondItem="Sn1-oq-vjl" secondAttribute="top" constant="30" id="mch-o2-FrY"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V6E-2B-Txh" secondAttribute="trailing" constant="24" id="mcv-H2-pcV"/>
+                                    <constraint firstItem="z4V-Xn-Nwr" firstAttribute="leading" secondItem="Sn1-oq-vjl" secondAttribute="leading" constant="24" id="n3M-ku-SP4"/>
+                                    <constraint firstAttribute="trailing" secondItem="FAa-QK-GBC" secondAttribute="trailing" id="ng6-J9-qTA"/>
+                                    <constraint firstAttribute="trailing" secondItem="PDv-Oy-YIs" secondAttribute="trailing" constant="24" id="qNg-rx-LsO"/>
+                                    <constraint firstAttribute="trailing" secondItem="z4V-Xn-Nwr" secondAttribute="trailing" id="xvv-Xz-5ue"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="nsn-iq-MOM">
+                                <rect key="frame" x="12" y="-47" width="322" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nsn-iq-MOM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="8VF-2H-NS3"/>
+                            <constraint firstItem="nsn-iq-MOM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-80" id="JZw-id-3NL"/>
+                            <constraint firstItem="mfE-yu-CeZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KlJ-8V-UI7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S21-jP-cBp" secondAttribute="trailing" constant="22" id="LfR-g1-Y95"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mfE-yu-CeZ" secondAttribute="trailing" id="NuZ-8W-jm4"/>
+                            <constraint firstItem="B6F-wk-zcN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="QdR-zR-9fC"/>
+                            <constraint firstAttribute="bottom" secondItem="Sn1-oq-vjl" secondAttribute="bottom" constant="-480" id="ROb-gl-rZg"/>
+                            <constraint firstItem="mfE-yu-CeZ" firstAttribute="top" secondItem="2ow-LF-dQI" secondAttribute="bottom" constant="20" id="RYF-du-eF7"/>
+                            <constraint firstItem="rlI-9u-pRp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tkz-lE-oC2"/>
+                            <constraint firstItem="nsn-iq-MOM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-47" id="anq-g3-mn6"/>
+                            <constraint firstItem="2ow-LF-dQI" firstAttribute="top" secondItem="B6F-wk-zcN" secondAttribute="bottom" constant="13" id="bUL-JR-nHO"/>
+                            <constraint firstItem="B6F-wk-zcN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="ifo-uC-SZ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sn1-oq-vjl" secondAttribute="trailing" id="jrf-R1-iXG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rlI-9u-pRp" secondAttribute="bottom" constant="15" id="lW6-k3-QOF"/>
+                            <constraint firstItem="Sn1-oq-vjl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lhB-Ig-lsP"/>
+                            <constraint firstItem="S21-jP-cBp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="pQS-6E-ZzG"/>
+                            <constraint firstItem="2ow-LF-dQI" firstAttribute="leading" secondItem="B6F-wk-zcN" secondAttribute="leading" id="rUM-Ju-sYO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mfE-yu-CeZ" secondAttribute="bottom" id="zd1-Pz-JB6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bedroomFilterCollection" destination="pkC-bQ-7Py" id="JqM-Wa-4jy"/>
+                        <outlet property="filterBtn" destination="rlI-9u-pRp" id="OYe-Fr-LYK"/>
+                        <outlet property="filterView" destination="Sn1-oq-vjl" id="QVQ-Iz-WOv"/>
+                        <outlet property="findRoomLabel" destination="B6F-wk-zcN" id="66n-8q-8aX"/>
+                        <outlet property="listCollection" destination="mfE-yu-CeZ" id="wUG-iL-Cir"/>
+                        <outlet property="priceFilterCollection" destination="FAa-QK-GBC" id="Gjv-2z-h3n"/>
+                        <outlet property="searchBar" destination="nsn-iq-MOM" id="VY5-3N-8r0"/>
+                        <outlet property="searchBarTop" destination="anq-g3-mn6" id="eEG-eY-aCV"/>
+                        <outlet property="searchBtn" destination="S21-jP-cBp" id="j8d-9c-OXY"/>
+                        <outlet property="typeFilterCollection" destination="z4V-Xn-Nwr" id="gLv-SX-kvV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bath_icon" width="20" height="20"/>
+        <image name="bed_icon" width="20" height="19"/>
+        <image name="blueprint_icon" width="20" height="20"/>
+        <image name="search_icon" width="20" height="20"/>
+    </resources>
+</document>

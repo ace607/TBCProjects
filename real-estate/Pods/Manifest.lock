@@ -1,0 +1,24 @@
+PODS:
+  - PureLayout (3.0.2)
+  - Shimmer (1.0.2)
+  - ShimmerBlocks (0.1.1):
+    - PureLayout (~> 3.0.2)
+    - Shimmer (~> 1.0.2)
+
+DEPENDENCIES:
+  - ShimmerBlocks
+
+SPEC REPOS:
+  trunk:
+    - PureLayout
+    - Shimmer
+    - ShimmerBlocks
+
+SPEC CHECKSUMS:
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  ShimmerBlocks: fe8fba0be754fae85be8cab8e934050112e1f601
+
+PODFILE CHECKSUM: f42a3872affe50c9bb10370d264fda2b307c1cb8
+
+COCOAPODS: 1.9.3
