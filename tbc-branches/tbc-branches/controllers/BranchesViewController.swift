@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Localize
 
 class BranchesViewController: UIViewController {
 
     @IBOutlet weak var branchesCollection: UICollectionView!
+    @IBOutlet weak var topBarView: UIView!
+    @IBOutlet weak var langBtn: UIButton!
     
     var branches = [ATMBranch]()
     
@@ -23,15 +26,46 @@ class BranchesViewController: UIViewController {
         branchesCollection.dataSource = self
         
         
+        view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+        
+        topBarView.layer.shadowColor = UIColor.black.withAlphaComponent(0.1).cgColor
+        topBarView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        topBarView.layer.shadowRadius = 6
+        topBarView.layer.shadowOpacity = 1
+        
         viewModel.getObjects { (objects) in
             self.branches.append(contentsOf: objects)
             DispatchQueue.main.async {
                 self.branchesCollection.reloadData()
             }
         }
-        
-    }
+        langBtn.setImage(Localize.currentLanguage == "en" ? UIImage(named: "img-flag-uk") : UIImage(named: "img-flag-georgia"), for: .normal)
 
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didChangeLang(with:)),
+            name: NSNotification.Name("change_lang"),
+            object: nil)
+    }
+    
+    @objc func didChangeLang(with notification: Notification) {
+        self.branchesCollection.reloadData()
+        self.langBtn.setImage(Localize.currentLanguage == "en" ? UIImage(named: "img-flag-uk") : UIImage(named: "img-flag-georgia"), for: .normal)
+        view.layoutIfNeeded()
+    }
+    
+    @IBAction func changeLang(_ sender: UIButton) {
+        if langBtn.currentImage == UIImage(named: "img-flag-uk") {
+            langBtn.setImage(UIImage(named: "img-flag-georgia"), for: .normal)
+            Localize.update(language: "ge")
+            NotificationCenter.default.post(name: NSNotification.Name("change_lang"), object: nil)
+        } else {
+            langBtn.setImage(UIImage(named: "img-flag-uk"), for: .normal)
+            Localize.update(language: "en")
+            NotificationCenter.default.post(name: NSNotification.Name("change_lang"), object: nil)
+        }
+    }
+    
 }
 extension BranchesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -49,8 +83,8 @@ extension BranchesViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = branchesCollection.dequeueReusableCell(withReuseIdentifier: "atm_cell", for: indexPath) as! BranchAtmCollectionViewCell
         
-        cell.name.text = branches[indexPath.row].nameGe
-        cell.address.text = branches[indexPath.row].addressGe
+        cell.name.text = Localize.currentLanguage == "ge" ? branches[indexPath.row].nameGe : branches[indexPath.row].nameEn
+        cell.address.text = Localize.currentLanguage == "ge" ? branches[indexPath.row].addressGe : branches[indexPath.row].addressEn
         
         return cell
     }

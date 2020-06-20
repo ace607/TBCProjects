@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,9 +24,13 @@
 		84D80613249CD37C006F01CE /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D80612249CD37C006F01CE /* APIServices.swift */; };
 		84D80615249CEB45006F01CE /* BranchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D80614249CEB44006F01CE /* BranchViewModel.swift */; };
 		84D80617249CEB76006F01CE /* BranchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D80616249CEB76006F01CE /* BranchesViewController.swift */; };
+		84D8061B249D1CB7006F01CE /* lang-en.json in Resources */ = {isa = PBXBuildFile; fileRef = 84D8061A249D1CB7006F01CE /* lang-en.json */; };
+		84D8061D249D1CE4006F01CE /* lang-ge.json in Resources */ = {isa = PBXBuildFile; fileRef = 84D8061C249D1CE4006F01CE /* lang-ge.json */; };
+		896EC0D78DBDCDC74770B695 /* Pods_tbc_branches.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877ABBD9276E5A326F54D7F9 /* Pods_tbc_branches.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4857FEEEB9AA0628E3E15F77 /* Pods-tbc-branches.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tbc-branches.release.xcconfig"; path = "Target Support Files/Pods-tbc-branches/Pods-tbc-branches.release.xcconfig"; sourceTree = "<group>"; };
 		84D805E5249C90EC006F01CE /* tbc-branches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tbc-branches.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D805E8249C90EC006F01CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D805EA249C90EC006F01CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,10 @@
 		84D80612249CD37C006F01CE /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		84D80614249CEB44006F01CE /* BranchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchViewModel.swift; sourceTree = "<group>"; };
 		84D80616249CEB76006F01CE /* BranchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesViewController.swift; sourceTree = "<group>"; };
+		84D8061A249D1CB7006F01CE /* lang-en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "lang-en.json"; sourceTree = "<group>"; };
+		84D8061C249D1CE4006F01CE /* lang-ge.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "lang-ge.json"; sourceTree = "<group>"; };
+		877ABBD9276E5A326F54D7F9 /* Pods_tbc_branches.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tbc_branches.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9222B4596C28623E8EEDE80 /* Pods-tbc-branches.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tbc-branches.debug.xcconfig"; path = "Target Support Files/Pods-tbc-branches/Pods-tbc-branches.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +61,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				896EC0D78DBDCDC74770B695 /* Pods_tbc_branches.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		594CD306A8B0AA6D21B22532 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				877ABBD9276E5A326F54D7F9 /* Pods_tbc_branches.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84D805DC249C90EC006F01CE = {
 			isa = PBXGroup;
 			children = (
 				84D805E7249C90EC006F01CE /* tbc-branches */,
 				84D805E6249C90EC006F01CE /* Products */,
+				FEFC3DF77E22A8F1590772A0 /* Pods */,
+				594CD306A8B0AA6D21B22532 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +97,7 @@
 		84D805E7249C90EC006F01CE /* tbc-branches */ = {
 			isa = PBXGroup;
 			children = (
+				84D80619249D1CA2006F01CE /* Localize */,
 				84D8060B249C9B2D006F01CE /* ViewModels */,
 				84D8060A249C9908006F01CE /* Services */,
 				84D80607249C96B2006F01CE /* Models */,
@@ -140,6 +160,24 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		84D80619249D1CA2006F01CE /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				84D8061A249D1CB7006F01CE /* lang-en.json */,
+				84D8061C249D1CE4006F01CE /* lang-ge.json */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
+		FEFC3DF77E22A8F1590772A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9222B4596C28623E8EEDE80 /* Pods-tbc-branches.debug.xcconfig */,
+				4857FEEEB9AA0628E3E15F77 /* Pods-tbc-branches.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84D805FC249C90FF006F01CE /* Build configuration list for PBXNativeTarget "tbc-branches" */;
 			buildPhases = (
+				39E1E857A7A6AC56F816FA42 /* [CP] Check Pods Manifest.lock */,
 				84D805E1249C90EC006F01CE /* Sources */,
 				84D805E2249C90EC006F01CE /* Frameworks */,
 				84D805E3249C90EC006F01CE /* Resources */,
+				27A030963ABE62925DCF1586 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,13 +240,57 @@
 			files = (
 				84D805F8249C90FF006F01CE /* LaunchScreen.storyboard in Resources */,
 				84D805F5249C90FF006F01CE /* Assets.xcassets in Resources */,
+				84D8061B249D1CB7006F01CE /* lang-en.json in Resources */,
 				84D80606249C9440006F01CE /* Roboto-Bold.ttf in Resources */,
 				84D80605249C9440006F01CE /* Roboto-Regular.ttf in Resources */,
+				84D8061D249D1CE4006F01CE /* lang-ge.json in Resources */,
 				84D805F0249C90EC006F01CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27A030963ABE62925DCF1586 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tbc-branches/Pods-tbc-branches-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tbc-branches/Pods-tbc-branches-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tbc-branches/Pods-tbc-branches-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39E1E857A7A6AC56F816FA42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tbc-branches-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84D805E1249C90EC006F01CE /* Sources */ = {
@@ -366,6 +450,7 @@
 		};
 		84D805FD249C90FF006F01CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9222B4596C28623E8EEDE80 /* Pods-tbc-branches.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +468,7 @@
 		};
 		84D805FE249C90FF006F01CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4857FEEEB9AA0628E3E15F77 /* Pods-tbc-branches.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

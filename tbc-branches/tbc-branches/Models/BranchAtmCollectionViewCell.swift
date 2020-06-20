@@ -25,7 +25,7 @@ class BranchAtmCollectionViewCell: UICollectionViewCell {
         self.layer.shadowColor = UIColor.black.withAlphaComponent(0.04).cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.layer.shadowRadius = 3
-        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOpacity = 1
         self.layer.masksToBounds = false
 
     }

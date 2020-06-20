@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Localize
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let localize = Localize.shared
+        
+        localize.update(provider: .json)
+        // Set your file name
+        localize.update(fileName: "lang")
+        // Set your default languaje.
+        localize.update(defaultLanguage: "en")
+        Localize.update(language: "ge")
         return true
     }
 
